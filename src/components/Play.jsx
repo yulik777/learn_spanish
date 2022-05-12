@@ -1,8 +1,6 @@
-
 import React from 'react';
-import logo from './logo.svg';
-
 import Card from './Card';
+
 
 let words = [
   {
@@ -42,16 +40,15 @@ let words = [
 ];
 
 
-function Show (){ 
+function Play(){ 
   
   return (
     <div>
-    <div className={Show}>
+    <div className={'Play'}>
       <div className='container'>
     {
       words.map((word) =>
-      <Card spanish={word.spanish} translate={word.translate} tag={word.tags}
-      isSelected={word.isSelected}></Card>
+      <Card spanish={word.spanish} translate={word.translate} tag={word.tags}></Card>
       )
   }
   </div>
@@ -60,5 +57,5 @@ function Show (){
   );
 }
 
-export default Show;
+export default Play;
 

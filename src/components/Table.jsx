@@ -1,4 +1,5 @@
-import Card from "./Card";
+
+import RowTable from './RowTable';
 
 let words = [
     {
@@ -6,12 +7,12 @@ let words = [
       spanish: "la manzana",
       translate: "apple",
       tags: "fruits",
-      isSelected: true,
+
     },
     {
       id: "02",
       spanish: "el coche",
-      transcription: "car",
+      translate: "car",
       tags: "transport"
     
     },
@@ -36,26 +37,33 @@ let words = [
   
     }
   ];
-function Table() {
+function Table({words, onDelete, onItemSave}) {
+
     return (
       <table className="table">
         <tr className="row-main">
+        <th className="cell-main">ID</th>
           <th className="cell-main">Spanish</th>
           <th className="cell-main">Translate</th>
           <th className="cell-main">Tags</th>
           <th className="cell-main-action">Edit</th>
           <th className="cell-main-action">Delete</th>
         </tr>
+
         {words.map((word) => (
-          <Card
+          
+          <RowTable>
+            id={word.id}
             Spanish={word.spanish}
             translate={word.translate}
             tags={word.tags}
-            isSelected={word.isSelected}
-          ></Card>
+            edit= {}
+            delete={}
+          
+          </RowTable>
         ))}
       </table>
     );
   }
-  
+
   export default Table;
