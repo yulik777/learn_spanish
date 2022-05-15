@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './assets/styles/card.scss';
 
 function Card (props) {
 
@@ -12,10 +13,13 @@ function Card (props) {
 
     <div className="card">
       <div className="card__spanish">{props.spanish}</div>
-      <div className="card__translate">{props.translate}</div>
-      <div className="button_show_spanish" onClick = {handleChange}>{pressed ? <div>{props.english}</div> : <button className="button_show">Translate</button>}</div>
+     {/*} <img сlassName="card__image" src={props.image} alt="img"/>*/}
+      <div onClick = {handleChange}>
+                {pressed ?
+                    <div className="card_translation">{props.translate} {props.image} </div> :
+                    <button className="translate">TRANSLATE</button>}
+            </div>
     </div>
-  
   );
 }
 

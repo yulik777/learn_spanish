@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 
-const RowTable = ({id, spanish, translate, tags, onDelete, onItemSave}) => {
+
+const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
 
   const [isEdit, setEdit] = useState(false);
 
-  let classNames ='table__row';
+  let classNames ='row-main';
 
   if(isEdit){
     classNames += 'row_edit';
@@ -33,12 +34,10 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onItemSave}) => {
           <>
           <td><input className="input_edit" name="id" defaultValue={id} onChange={handleChange}></input></td>
           <td><input className="input_edit" name="english" defaultValue={spanish} onChange={handleChange}></input></td>
-          <td><input className="input_edit" name="transcription" defaultValue={translate} onChange={handleChange}></input></td>
+          <td><input className="input_edit" name="translate" defaultValue={translate} onChange={handleChange}></input></td>
           <td><input className="input_edit" defaultValue={tags} onChange={handleChange}></input></td>
-          <td>
-              <i className="fas fa-check icon icon__save" onClick = {onItemSave}> </i>
-              <i className="fas fa-ban icon icon__cancel" onClick = {handleCancelClick}></i>
-          </td>
+          <td><i className="edit" onClick = {onSave}> </i></td>
+          <td><i className="delete" onClick = {handleCancelClick}></i></td>
           </>
           :
           <>
@@ -46,10 +45,8 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onItemSave}) => {
           <td>{spanish}</td>
           <td>{translate}</td>
           <td>{tags}</td>
-          <td>
-              <i className="fas fa-pen icon icon__edit" onClick = {onEdit}> </i>
-              <i className="fas fa-trash icon icon__delete" onClick = {onDelete}></i>
-          </td>
+          <td><i className="edit" onClick = {onEdit}>&#9997;</i></td>
+          <td> <i className="delete" onClick = {onDelete}>&#128465;</i></td>
           </>
         }
       </tr>

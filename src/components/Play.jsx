@@ -1,11 +1,15 @@
 import React from 'react';
 import Card from './Card';
+import './assets/styles/play.scss';
+import apple from './assets/images/apple.png';
+
 
 
 let words = [
   {
     id: "01",
     spanish: "la manzana",
+    image: "./assets/images/apple",
     translate: "apple",
     tags: "fruits",
     isSelected: true,
@@ -13,7 +17,7 @@ let words = [
   {
     id: "02",
     spanish: "el coche",
-    transcription: "car",
+    translate: "car",
     tags: "transport"
   
   },
@@ -45,10 +49,10 @@ function Play(){
   return (
     <div>
     <div className={'Play'}>
-      <div className='container'>
+      <div className='container__card'>
     {
       words.map((word) =>
-      <Card spanish={word.spanish} translate={word.translate} tag={word.tags}></Card>
+      <Card key={word.spanish} spanish={word.spanish} image={word.image} translate={word.translate} tag={word.tags}></Card>
       )
   }
   </div>

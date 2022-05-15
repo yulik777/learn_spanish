@@ -1,5 +1,5 @@
-
 import RowTable from './RowTable';
+import './assets/styles/table.scss';
 
 let words = [
     {
@@ -7,7 +7,8 @@ let words = [
       spanish: "la manzana",
       translate: "apple",
       tags: "fruits",
-
+      "isEdit": false,
+      "isSave": false
     },
     {
       id: "02",
@@ -37,10 +38,11 @@ let words = [
   
     }
   ];
-function Table({words, onDelete, onItemSave}) {
+function Table (onSave,onDelete,id) {
 
     return (
       <table className="table">
+        <thead>
         <tr className="row-main">
         <th className="cell-main">ID</th>
           <th className="cell-main">Spanish</th>
@@ -49,21 +51,25 @@ function Table({words, onDelete, onItemSave}) {
           <th className="cell-main-action">Edit</th>
           <th className="cell-main-action">Delete</th>
         </tr>
+        </thead>
+        <tbody>
 
         {words.map((word) => (
           
-          <RowTable>
+          <RowTable
+            key={word.id}
             id={word.id}
-            Spanish={word.spanish}
+            spanish={word.spanish}
             translate={word.translate}
             tags={word.tags}
-            edit= {}
-            delete={}
-          
-          </RowTable>
+            onSave={()=> onSave(id)}
+            onDelete={()=> onDelete(id)}
+           />
         ))}
+        </tbody>
       </table>
     );
   }
+
 
   export default Table;
