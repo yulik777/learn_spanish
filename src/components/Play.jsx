@@ -1,15 +1,13 @@
 import React from 'react';
 import Card from './Card';
 import './assets/styles/play.scss';
-import apple from './assets/images/apple.png';
-
 
 
 let words = [
   {
     id: "01",
     spanish: "la manzana",
-    image: "./assets/images/apple",
+    image: "apple.png",
     translate: "apple",
     tags: "fruits",
     isSelected: true,

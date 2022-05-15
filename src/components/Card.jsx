@@ -13,7 +13,7 @@ function Card (props) {
 
     <div className="card">
       <div className="card__spanish">{props.spanish}</div>
-     {/*} <img сlassName="card__image" src={props.image} alt="img"/>*/}
+      <img сlassName="card__image" src={require(`./assets/images/${props.image}`)} alt="img"/>
       <div onClick = {handleChange}>
                 {pressed ?
                     <div className="card_translation">{props.translate} {props.image} </div> :
