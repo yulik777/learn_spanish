@@ -15,6 +15,7 @@ let words = [
   {
     id: "02",
     spanish: "el coche",
+    image: "car.png",
     translate: "car",
     tags: "transport"
   
@@ -22,6 +23,7 @@ let words = [
   {
     id: "03",
     spanish: "la casa",
+    image: "house.png",
     translate: "house",
     tags: "subjects"
   },
