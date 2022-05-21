@@ -5,18 +5,12 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
 
   const [isEdit, setEdit] = useState(false);
 
-  let classNames ='row-main';
-
-  if(isEdit){
-    classNames += 'row_edit';
-  }
-
   const onEdit = () => {
       setEdit(!isEdit);
   }
 
-  const cancelClick = () => {
-    setEdit(!isEdit);
+  onSave = () => {
+     setEdit(!isEdit);
   }
 
   const [state, setState] = useState({id:'', spanish:'', translate:'', tags:''});
@@ -33,9 +27,11 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
     });
   };
 
+
+  
     return (
 
-      <tr className={classNames}>
+      <tr>
         {isEdit ?
           <>
           <td><input className="input_edit" name="id" defaultValue={id} onChange={handleChange}></input></td>

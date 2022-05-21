@@ -30,6 +30,7 @@ let words = [
   {
     id: "04",
     spanish: "el vestido",
+    image: "dress.png",
     translate: "dress",
     tags: "things"
    
@@ -37,6 +38,7 @@ let words = [
   {
     id: "05",
     spanish: "labios",
+    image: "lips.png",
     translate: "lips",
     tags: "body"
 
