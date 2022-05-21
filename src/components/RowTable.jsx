@@ -15,7 +15,7 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
       setEdit(!isEdit);
   }
 
-  const handleCancelClick = () => {
+  const cancelClick = () => {
     setEdit(!isEdit);
   }
 
@@ -27,6 +27,12 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
     })
   }
 
+  const handleCancel = () => {
+    setState({
+      id, spanish, translate, tags, onDelete, onSave,
+    });
+  };
+
     return (
 
       <tr className={classNames}>
@@ -37,7 +43,7 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
           <td><input className="input_edit" name="translate" defaultValue={translate} onChange={handleChange}></input></td>
           <td><input className="input_edit" defaultValue={tags} onChange={handleChange}></input></td>
           <td><i className="edit" onClick = {onSave}> </i></td>
-          <td><i className="delete" onClick = {handleCancelClick}></i></td>
+          <td><i className="delete" onClick = {handleCancel}></i></td>
           </>
           :
           <>
