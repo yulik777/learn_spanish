@@ -2,51 +2,7 @@ import React from 'react';
 import Card from './Card';
 import './assets/styles/play.scss';
 
-
-let words = [
-  {
-    id: "01",
-    spanish: "la manzana",
-    image: "apple.png",
-    translate: "apple",
-    tags: "fruits",
-    isSelected: true,
-  },
-  {
-    id: "02",
-    spanish: "el coche",
-    image: "car.png",
-    translate: "car",
-    tags: "transport"
-  
-  },
-  {
-    id: "03",
-    spanish: "la casa",
-    image: "house.png",
-    translate: "house",
-    tags: "subjects"
-  },
-  {
-    id: "04",
-    spanish: "el vestido",
-    image: "dress.png",
-    translate: "dress",
-    tags: "things"
-   
-  },
-  {
-    id: "05",
-    spanish: "labios",
-    image: "lips.png",
-    translate: "lips",
-    tags: "body"
-
-  }
-];
-
-
-function Play(){ 
+function Play({words}){ 
   
   return (
     <div>

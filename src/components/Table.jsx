@@ -1,44 +1,9 @@
 import RowTable from './RowTable';
 import './assets/styles/table.scss';
 
-let words = [
-    {
-      id: "01",
-      spanish: "la manzana",
-      translate: "apple",
-      tags: "fruits",
-      "isEdit": false,
-      "isSave": false
-    },
-    {
-      id: "02",
-      spanish: "el coche",
-      translate: "car",
-      tags: "transport"
-    
-    },
-    {
-      id: "03",
-      spanish: "la casa",
-      translate: "house",
-      tags: "subjects"
-    },
-    {
-      id: "04",
-      spanish: "el vestido",
-      translate: "dress",
-      tags: "things"
-     
-    },
-    {
-      id: "05",
-      spanish: "labios",
-      translate: "lips",
-      tags: "body"
-  
-    }
-  ];
-function Table (onSave,onDelete,id) {
+
+
+function Table ({onSave,onDelete,id,words}) {
 
     return (
       <table className="table">
@@ -62,8 +27,8 @@ function Table (onSave,onDelete,id) {
             spanish={word.spanish}
             translate={word.translate}
             tags={word.tags}
-            onSave={()=> onSave(id)}
-            onDelete={()=> onDelete(id)}
+            onSave={()=> onSave(word.id)}
+            onDelete={()=> onDelete(word.id)}
            />
         ))}
         </tbody>
