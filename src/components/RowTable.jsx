@@ -27,7 +27,7 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
     });
   };
 
-
+  
   
     return (
 
@@ -38,8 +38,8 @@ const RowTable = ({id, spanish, translate, tags, onDelete, onSave}) => {
           <td><input className="input_edit" name="english" defaultValue={spanish} onChange={handleChange}></input></td>
           <td><input className="input_edit" name="translate" defaultValue={translate} onChange={handleChange}></input></td>
           <td><input className="input_edit" defaultValue={tags} onChange={handleChange}></input></td>
-          <td><i className="edit" onClick = {onSave}> </i></td>
-          <td><i className="delete" onClick = {handleCancel}></i></td>
+          <td><button className="edit" onClick = {onSave}> Save </button> <button className="cancel" onClick = {handleCancel}>Cancel</button></td>
+          <td> <i className="delete" onClick = {onDelete}>&#128465;</i></td>
           </>
           :
           <>
