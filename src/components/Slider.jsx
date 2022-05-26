@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card.jsx";
+import translations from '../App';
 
 
 function Slider({translations}) {
