@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function RowTable (props, onDelete) {
+function RowTable (props,{onDelete}) {
 
   const [id, setId] = useState(props.id);
   const [spanish, setSpanish] = useState(props.spanish);
@@ -23,7 +23,7 @@ const handleTagsChange = (e) => {
   setTags(e.target.value);
 }
 
- 
+const [pressed,setPressed] = useState(false);
   const handleSave = () => {
     setPressed(!pressed);
     setId(id);
@@ -44,7 +44,7 @@ const handleTagsChange = (e) => {
   const onEdit = () => {
     setPressed(!pressed);
   }
-
+ 
 
   return (
 

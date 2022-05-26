@@ -50,7 +50,7 @@ let translations = [
 
 
 function App() {
-const[words, setWords] = useState(translations)
+const[words, setWords] = useState(translations);
 
 const handleDelete = (id) =>{
   const newWords = words.filter((word) => word.id !== id);
