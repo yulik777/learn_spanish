@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function RowTable (props, onDelete, onEdit) {
+function RowTable (props, onDelete) {
 
   const [id, setId] = useState(props.id);
   const [spanish, setSpanish] = useState(props.spanish);
@@ -23,31 +23,33 @@ const handleTagsChange = (e) => {
   setTags(e.target.value);
 }
 
+ 
   const handleSave = () => {
-    setEdit(!isEdit);
+    setPressed(!pressed);
     setId(id);
     setSpanish(spanish);
     setTranslate(translate);
-    setTags(tags);
-  };
-
-  const handleCancel = () => {
-    setEdit(!isEdit);
-    setId(id);
-    setSpanish(spanish);
-    setTranslate(translate);
-    setTags(tags);
-
-  };
-
-  const onEdit = () => {
-    setEdit(!isEdit);
+    setTags(tags)
   }
+
+  const handleCancel= () => {
+    setPressed(!pressed);
+    setId(id);
+    setSpanish(spanish);
+    setTranslate(translate);
+    setTags(tags)
+  }
+  
+  
+  const onEdit = () => {
+    setPressed(!pressed);
+  }
+
 
   return (
 
     <tr>
-      {isEdit ?
+      {pressed ?
         <>
           <td><input className="input_edit" name="id" defaultValue={id} onChange={handleIdChange}></input></td>
           <td><input className="input_edit" name="english" defaultValue={spanish} onChange={handleSpanishChange}></input></td>
@@ -62,11 +64,11 @@ const handleTagsChange = (e) => {
           <td>{spanish}</td>
           <td>{translate}</td>
           <td>{tags}</td>
-          <td><i className="edit" onClick={onEdit}>&#9997;</i></td>
+          <td><i className="edit" onClick={onEdit} >&#9997;</i></td>
           <td> <button className="delete" onClick={onDelete}>&#128465;</button></td>
         </>}
     </tr>
   );
-}
+      };
 
 export default RowTable;
