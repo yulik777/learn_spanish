@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function RowTable (props,{onDelete}) {
+function RowTable (props,onDelete) {
 
   const [id, setId] = useState(props.id);
   const [spanish, setSpanish] = useState(props.spanish);
@@ -65,7 +65,7 @@ const [pressed,setPressed] = useState(false);
           <td>{translate}</td>
           <td>{tags}</td>
           <td><i className="edit" onClick={onEdit} >&#9997;</i></td>
-          <td> <button className="delete" onClick={onDelete}>&#128465;</button></td>
+          <td> <button className="delete" onClick={props.onDelete}>&#128465;</button></td>
         </>}
     </tr>
   );
