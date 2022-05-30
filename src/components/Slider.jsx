@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import Card from "./Card.jsx";
-import translations from '../App';
+import words from '../App';
+import './assets/styles/slider.scss';
 
 
-function Slider({translations}) {
+function Slider ({words}) {
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const elements = translations.map((translation) => {
-    const { id, ...translationProps } = translation;
-    return <Card key={id} id={id} {...translationProps}></Card>;
+  const elements = words.map((words) => {
+    const { id, ...wordsProps } = words;
+    return <Card key={id} id={id} {...wordsProps}></Card>;
   });
 
 
   const right = () => {
-    if (slideIndex !== translations.length) {
+    if (slideIndex !== words.length) {
       setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === translations.length) {
+    } else if (slideIndex === words.length) {
       setSlideIndex(1);
     }
   };
@@ -24,21 +25,20 @@ function Slider({translations}) {
     if (slideIndex !== 1) {
       setSlideIndex(slideIndex - 1);
     } else if (slideIndex === 1) {
-      setSlideIndex(translations.length);
+      setSlideIndex(words.length);
     }
   };
 
   
   return (
     <div className="slider">
-      <button className="left" onClick={left}>
-  hhhhh
-      </button>
-      <div>{elements[slideIndex - 1]}</div>
-      <button className="right" onClick={right}>
-      hhhhh
-      </button>
+      <div className="pictures">{elements[slideIndex - 1]}</div>
+      <div className="rightleft">
+      <button className="left" onClick={left}> &#8592;</button>
+      <button className="right" onClick={right}>&#8594;</button>
+      </div>
     </div>
+   
   );
 }
 
