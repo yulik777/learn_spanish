@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import './App.css';
+
 import Header from './components/Header';
 import Play from './components/Play';
 import Footer from './components/Footer';
 import Table from './components/Table';
 import Slider from './components/Slider';
+
 
 let translations = [
   {
@@ -60,13 +62,18 @@ const handleDelete = (id) =>{
 
 
   return (
+    
     <div className="App">
       <Header/>
+      
       <Play words={words}/>
-      <Slider  words={words}/>
+      <Slider words={words}/>
       <Table words={words} onDelete={handleDelete}/>
+      
       <Footer/>
+   
     </div>
+   
   );
 }
 
