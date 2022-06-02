@@ -1,80 +1,33 @@
-import { useState } from 'react';
-import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import {Errorpage} from './components/pages/Errorpage';
+import {Homepage} from './components/pages/Homepage';
+import {Playpage} from './components/pages/Playpage';
 
 import Header from './components/Header';
-import Play from './components/Play';
 import Footer from './components/Footer';
-import Table from './components/Table';
-import Slider from './components/Slider';
-
-
-let translations = [
-  {
-    id: "01",
-    spanish: "la manzana",
-    image: "apple.png",
-    translate: "apple",
-    tags: "fruits",
-    isSelected: true,
-  },
-  {
-    id: "02",
-    spanish: "el coche",
-    image: "car.png",
-    translate: "car",
-    tags: "transport"
-  
-  },
-  {
-    id: "03",
-    spanish: "la casa",
-    image: "house.png",
-    translate: "house",
-    tags: "subjects"
-  },
-  {
-    id: "04",
-    spanish: "el vestido",
-    image: "dress.png",
-    translate: "dress",
-    tags: "things"
-   
-  },
-  {
-    id: "05",
-    spanish: "labios",
-    image: "lips.png",
-    translate: "lips",
-    tags: "body"
-
-  }
-];
 
 
 
-function App() {
-const[words, setWords] = useState(translations);
 
-const handleDelete = (id) =>{
-  const newWords = words.filter((word) => word.id !== id);
-  setWords(newWords);
+
+function AppPages() {
+
+    return (
+        <BrowserRouter>
+            <div className="app">
+                <Header/>
+                <main className="main">
+                    <Routes>
+                        <Route path="/" element={<Homepage/>}/>
+                        <Route path="/game" element={<Playpage/>}/>
+                        <Route path="/error" element={<Errorpage/>}/>
+                    </Routes>
+                </main>
+                <Footer/>
+            </div>
+        </BrowserRouter>
+    );
 }
 
-
-  return (
-    
-    <div className="App">
-      <Header/>
-      
-      <Play words={words}/>
-      <Slider words={words}/>
-      <Table words={words} onDelete={handleDelete}/>
-      
-      <Footer/>
-   
-    </div>
-   
-  );
-}
-
-export default App; 
+export default AppPages;
