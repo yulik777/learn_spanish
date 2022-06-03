@@ -1,5 +1,6 @@
 import RowTable from './RowTable.jsx';
 import './assets/styles/table.scss';
+import words from './Main.jsx';
 
 
 function Table ({onSave,onDelete,id,words}) {
@@ -16,7 +17,7 @@ function Table ({onSave,onDelete,id,words}) {
           <th className="cell-main-action">Delete</th>
         </tr>
         </thead>
-        
+
         <tbody>
         {words.map((word) => (
           
