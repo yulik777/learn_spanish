@@ -1,20 +1,19 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, 
+  Routes, 
+  Route} from "react-router-dom";
 
-import {Errorpage} from './components/pages/Errorpage';
-import {Homepage} from './components/pages/Homepage';
-import {Playpage} from './components/pages/Playpage';
+import Errorpage from '../src/components/pages/Errorpage.jsx';
+import Homepage from './components/pages/Homepage';
+import Playpage from './components/pages/Playpage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 
-
-
-
 function AppPages() {
 
     return (
-        <BrowserRouter>
+        <Router>
             <div className="app">
                 <Header/>
                 <main className="main">
@@ -26,7 +25,7 @@ function AppPages() {
                 </main>
                 <Footer/>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 }
 

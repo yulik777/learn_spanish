@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import './App.css';
 
-import Header from './components/Header';
-import Play from './components/Play';
-import Footer from './components/Footer';
-import Table from './components/Table';
-import Slider from './components/Slider';
+
+import Header from './Header.jsx';
+import Play from './Play.jsx';
+import Footer from './Footer.jsx';
+import Table from './Table.jsx';
+import Slider from './Slider.jsx';
 
 
 let translations = [
@@ -52,7 +52,7 @@ let translations = [
 
 
 
-function App() {
+function Main() {
 const[words, setWords] = useState(translations);
 
 const handleDelete = (id) =>{
@@ -77,4 +77,4 @@ const handleDelete = (id) =>{
   );
 }
 
-export default App; 
+export default Main; 

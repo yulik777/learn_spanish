@@ -1,4 +1,4 @@
-import Table from "./Table.jsx";
+import Table from "../Table.jsx";
 
 function Home() {
   return (

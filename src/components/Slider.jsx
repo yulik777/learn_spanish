@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card.jsx";
-import words from '../App';
+import words from './Main.jsx';
 import './assets/styles/slider.scss';
 
 
