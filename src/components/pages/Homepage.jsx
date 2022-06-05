@@ -1,9 +1,11 @@
 import Table from "../Table.jsx";
+import words from '../Main';
+
 
 function Home() {
   return (
     <div className="home">
-      <Table />
+      <Table words={words}/>
     </div>
   );
 }
