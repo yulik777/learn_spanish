@@ -1,5 +1,5 @@
 import img from './assets/images/error.png';
-import styles from './assets/styles/error.scss';
+import  './assets/styles/error.scss';
 
 
 const Error = () => {
