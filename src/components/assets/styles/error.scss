@@ -1,12 +1,10 @@
-img {
-    display: inline-block;
-    height: 70vh;
-    width: 90vh;
-  
-}
-
 .error{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.err{
+    width: 500px;
+    height: 500px;
 }
