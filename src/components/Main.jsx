@@ -8,7 +8,7 @@ import Table from './Table.jsx';
 import Slider from './Slider.jsx';
 
 
-let translations = [
+export const translations = [
   {
     id: "01",
     spanish: "la manzana",
@@ -68,7 +68,7 @@ const handleDelete = (id) =>{
       
       <Play words={words}/>
       <Slider words={words}/>
-      <Table words={words} onDelete={handleDelete}/>
+      <Table  onDelete={handleDelete}/>
       
       <Footer/>
    

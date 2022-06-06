@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Card from "./Card.jsx";
-import words from './Main.jsx';
 import './assets/styles/slider.scss';
 
 
@@ -9,7 +8,7 @@ function Slider ({words}) {
 
   const elements = words.map((words) => {
     const { id, ...wordsProps } = words;
-    return <Card key={id} id={id} {...wordsProps}></Card>;
+    return <Card key={id} id={id} {...wordsProps}/>;
   });
 
 

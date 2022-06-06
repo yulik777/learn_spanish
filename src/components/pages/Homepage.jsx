@@ -1,6 +1,5 @@
 import Table from "../Table.jsx";
-import words from '../Main';
-
+import {translations as words} from '../Main';
 
 function Home() {
   return (

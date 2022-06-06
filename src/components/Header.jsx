@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './assets/styles/header.scss';
 import logo from './assets/images/logo.png';
 
@@ -8,8 +8,12 @@ export default function Header() {
     return (
 <div className="header">
 <div  className="header__name">
-<img className='logo' src={logo} alt="logo"/>
-<h1>Learn Spanish</h1>
+    <Link to='/'>
+<img className='logo' src={logo} alt="logo"/></Link>
+<NavLink 
+                        style={({ isActive }) => ({
+                        color: isActive ? 'red' : 'inherit'
+                        })} to="/error"> <h1>Learn Spanish</h1> </NavLink>
 </div>
 <div className="header__mainmenu">
     <Link to='/' className="header__menu home" href="w"> Home</Link>

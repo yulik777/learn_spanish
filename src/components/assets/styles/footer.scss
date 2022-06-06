@@ -3,5 +3,7 @@ $footercolor:  #ccccff;
     height: 70px;
     background-color: $footercolor;
     margin-top: 50px;
-    
+    display: flex;
+  flex-direction: column;
+  align-items: center;
 }

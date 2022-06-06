@@ -1,10 +1,11 @@
 import Slider from "../Slider.jsx";
+import {translations as words} from '../Main';
 
 
 function Game() {
   return (
     <div className="play">
-      <Slider/>
+      <Slider words={words}/>
     </div>
   );
 }

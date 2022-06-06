@@ -1,9 +1,8 @@
 import RowTable from './RowTable.jsx';
 import './assets/styles/table.scss';
-import words from './Main.jsx';
 
 
-function Table ({onSave,onDelete,id,words}) {
+function Table({onSave,onDelete,words}) {
 
     return (
       <table className="table">
