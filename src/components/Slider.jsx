@@ -28,12 +28,12 @@ function Slider ({words}) {
   };
 
   const addOldWord = (id) => {
-    const array = [...wordLearned];
-    array.push(id);
+    const oldwords = [...wordLearned];
+    oldwords.push(id);
     let result = [];
-    for (let str of array) {
-      if (!result.includes(str)) {
-        result.push(str);
+    for (let newword of oldwords) {
+      if (!result.includes(newword)) {
+        result.push(newword);
       }
     }
 
