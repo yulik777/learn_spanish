@@ -5,10 +5,12 @@ import './assets/styles/slider.scss';
 
 function Slider ({words}) {
   const [slideIndex, setSlideIndex] = useState(1);
+  const [wordNumber, setwordNumber] = useState(0);
+  const [wordLearned, setwordLearned] = useState([]);
 
   const elements = words.map((words) => {
     const { id, ...wordsProps } = words;
-    return <Card key={id} id={id} {...wordsProps}/>;
+    return <Card key={id} id={id} addOldWord={addOldWord} {...wordsProps}/>;
   });
 
 
@@ -28,7 +30,20 @@ function Slider ({words}) {
     }
   };
 
-  
+  const addOldWord = (id) => {
+    const array = [...wordLearned];
+    array.push(id);
+    let result = [];
+    for (let str of array) {
+      if (!result.includes(str)) {
+        result.push(str);
+      }
+    }
+
+    setwordLearned(result);
+    setwordNumber(result.length);
+  };
+
   return (
     <div className="slider">
       <div className="pictures">{elements[slideIndex - 1]}</div>
@@ -36,8 +51,10 @@ function Slider ({words}) {
       <button className="left" onClick={left}> &#8592;</button>
       <button className="right" onClick={right}>&#8594;</button>
       </div>
+
+    <div className="wordcount"> You learned {wordNumber}  {words.length} words </div>
     </div>
-   
+  
   );
 }
 
