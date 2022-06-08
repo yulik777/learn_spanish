@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import './assets/styles/card.scss';
 import './Play';
 
@@ -7,9 +7,15 @@ import './Play';
 function Card (props) {
 
     const [pressed, setPressed] = useState(false);
+    const buttonRef = useRef();
+
+    useEffect(()=>{
+      buttonRef.current.focus();
+    }, []);
 
     const handleChange = () => {
         setPressed(!pressed);
+        props.addOldWord(props.id);
       }
 
   return (
@@ -23,7 +29,7 @@ function Card (props) {
                     <div className="card_translation">{props.translate}
                    </div> </div>
                     :
-                    <button className="translate">TRANSLATE</button>}
+                    <button className="translate"  ref={buttonRef} >TRANSLATE</button>}
             </div>
     </div>
   );
