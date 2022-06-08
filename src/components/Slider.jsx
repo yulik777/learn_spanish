@@ -8,10 +8,7 @@ function Slider ({words}) {
   const [wordNumber, setwordNumber] = useState(0);
   const [wordLearned, setwordLearned] = useState([]);
 
-  const elements = words.map((words) => {
-    const { id, ...wordsProps } = words;
-    return <Card key={id} id={id} addOldWord={addOldWord} {...wordsProps}/>;
-  });
+
 
 
   const right = () => {
@@ -43,7 +40,10 @@ function Slider ({words}) {
     setwordLearned(result);
     setwordNumber(result.length);
   };
-
+  const elements = words.map((words) => {
+    const { id, ...wordsProps } = words;
+    return <Card key={id} id={id} addOldWord={addOldWord} {...wordsProps}/>;
+  });
   return (
     <div className="slider">
       <div className="pictures">{elements[slideIndex - 1]}</div>
@@ -52,7 +52,7 @@ function Slider ({words}) {
       <button className="right" onClick={right}>&#8594;</button>
       </div>
 
-    <div className="wordcount"> You learned {wordNumber}  {words.length} words </div>
+    <div className="wordcount"> You learned {wordNumber} out of {words.length} words </div>
     </div>
   
   );
