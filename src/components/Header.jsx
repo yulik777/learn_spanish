@@ -10,10 +10,7 @@ export default function Header() {
 <div  className="header__name">
     <Link to='/'>
 <img className='logo' src={logo} alt="logo"/></Link>
-<NavLink 
-                        style={({ isActive }) => ({
-                        color: isActive ? 'red' : 'inherit'
-                        })} to="/error"> <h1>Learn Spanish</h1> </NavLink>
+ <h1>Learn Spanish</h1>
 </div>
 <div className="header__mainmenu">
     <Link to='/' className="header__menu home" href="w"> Home</Link>
@@ -22,3 +19,7 @@ export default function Header() {
 </div>
       );
     }
+/*<NavLink 
+                        style={({ isActive }) => ({
+                        color: isActive ? 'red' : 'inherit'
+                        })} to="/error"> <h1>Learn Spanish</h1> </NavLink>*/

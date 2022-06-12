@@ -21,7 +21,7 @@ function AppPages() {
                     <Routes>
                         <Route path="/" element={<Homepage/>}/>
                         <Route path="/game" element={<Playpage/>}/>
-                        <Route path="/error" element={<Errorpage/>}/>
+                        <Route path="*" element={<Errorpage/>}/>
                     </Routes>
                 </main>
                 <Footer/>
