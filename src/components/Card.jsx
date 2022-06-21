@@ -6,7 +6,7 @@ import './Play';
 
 function Card (props) {
 
-    const [pressed, setPressed] = useState(false);
+    const [pressed, setPressed] = useState (false);
     const buttonRef = useRef();
 
     useEffect(()=>{
