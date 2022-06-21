@@ -49,7 +49,7 @@ function Slider ({words}) {
       <div className="pictures">{elements[slideIndex - 1]}</div>
       <div className="rightleft">
       <button className="left" onClick={left}> &#8592;</button>
-      <button className="right" onClick={right}>&#8594;</button>
+      <button className="right"  onClick={right}>&#8594;</button>
       </div>
 
     <div className="wordcount"> You learned {wordNumber} out of {words.length} words </div>
