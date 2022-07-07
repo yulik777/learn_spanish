@@ -8,20 +8,21 @@ function RowTable (props,onDelete) {
   const [translate, setTranslate] = useState(props.translate);
   const [tags, setTags] = useState(props.tags);
 
-  const handleIdChange = (e) => {
+
+ const handleIdChange = (e) => {
     setId(e.target.value);
-}
-const handleSpanishChange = (e) => {
+ }
+ const handleSpanishChange = (e) => {
   setSpanish(e.target.value);
-}
+ }
 
-const handleTranslateChange = (e) => {
+ const handleTranslateChange = (e) => {
   setTranslate(e.target.value);
-}
+  }
 
-const handleTagsChange = (e) => {
+ const handleTagsChange = (e) => {
   setTags(e.target.value);
-}
+ }
 
 const [pressed,setPressed] = useState(false);
   const handleSave = () => {
