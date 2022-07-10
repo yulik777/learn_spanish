@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext } from "react";
-import Loader from "./Loader.jsx";
+import Loader from "../components/Loader.jsx";
 
 export const WordsContext = createContext();
 
