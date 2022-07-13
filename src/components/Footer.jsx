@@ -7,7 +7,7 @@ function Footer () {
         <pre><b>© 2022 Learn Spanish, Inc.</b> <br/>
         Main Street 1, Olcott<br/>
         Buffalo, United States<br/>
-         283 784 333
+         077 283 784 333
          office@enfold-health.com
         </pre>
     </div>
