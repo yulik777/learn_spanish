@@ -27,14 +27,14 @@ export const translations = [
   },
   {
     id: "03",
-    spanish: "lacasa",
+    spanish: "la casa",
     image: "house.png",
     translate: "house",
     tags: "subjects"
   },
   {
     id: "04",
-    spanish: "elvestido",
+    spanish: "el vestido",
     image: "dress.png",
     translate: "dress",
     tags: "things"
