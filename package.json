@@ -1,6 +1,7 @@
 {
   "name": "learn_spanish",
   "version": "0.1.0",
+  "homepage": "https://yulik777.github.io/learn_spanish/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
