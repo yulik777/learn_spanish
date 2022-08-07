@@ -3,7 +3,6 @@ import './assets/styles/card.scss';
 import './Play';
 
 
-
 function Card (props) {
 
     const [pressed, setPressed] = useState (false);
@@ -25,9 +24,10 @@ function Card (props) {
       {/*<img сlassName="card__image" src={(`images/${props.image}`)} alt="img"/>*/}
       <div onClick = {handleChange}>
                 {pressed ?
-                <div> <img сlassName="card_image" src={(`images/${props.image}`)} alt="img"/>
+                <div>
+                    <img сlassName="card_image" src={(`images/${props.image}`)} alt="img"/>
                     <div className="card_translation">{props.translate}
-                   </div> </div>
+                    </div> </div>
                     :
                     <button className="translate"  ref={buttonRef} >TRANSLATE</button>}
             </div>
