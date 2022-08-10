@@ -21,11 +21,10 @@ function Card (props) {
 
     <div className="card">
       <div className="card__spanish">{props.spanish}</div>
-      {/*<img сlassName="card__image" src={(`images/${props.image}`)} alt="img"/>*/}
       <div onClick = {handleChange}>
                 {pressed ?
                 <div>
-                    <img сlassName="card_image" src={(`images/${props.image}`)} alt="img"/>
+                    {/*<img сlassName="card_image" src={(`images/${props.image}`)} alt="img"/>*/}
                     <div className="card_translation">{props.translate}
                     </div> </div>
                     :
